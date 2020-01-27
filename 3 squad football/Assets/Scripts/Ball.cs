@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallMovement : MonoBehaviour
+public class Ball : MonoBehaviour
 {
     public Rigidbody rb;
     void Start()
@@ -10,15 +10,17 @@ public class BallMovement : MonoBehaviour
         rb.GetComponent<Rigidbody>();
     }
     Vector3 vel = new Vector3();
-    // Update is called once per frame
+    
     void Update()
     {
+       
+    }
+
+    public void Move()
+    {
         vel = gameObject.transform.position;
-        if (Input.anyKey)
-        {
-            vel.z = vel.z + 10;
-            rb.velocity = vel;
-            Debug.Log(rb.velocity);
-        }
+        vel.z = vel.z + 10;
+        rb.velocity = vel;
+        Debug.Log(rb.velocity);
     }
 }
