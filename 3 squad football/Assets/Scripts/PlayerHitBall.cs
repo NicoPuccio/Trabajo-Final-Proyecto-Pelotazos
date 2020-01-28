@@ -8,7 +8,15 @@ public class PlayerHitBall : MonoBehaviour
     public float hitRange = 0.5f;
     public LayerMask ballLayer;
     public GameObject ball;
-    
+
+    private Renderer rend;
+
+    private void Start()
+    {
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -25,6 +33,7 @@ public class PlayerHitBall : MonoBehaviour
         {
             Debug.Log("I hit the " + bola.name);
             bola.GetComponent<Ball>().Move();
+            bola.GetComponent<Ball>().ChangeMaterial(rend.material);
         }
     }
 

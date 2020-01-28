@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public Rigidbody rb;
+    Renderer rend;
+    private Rigidbody rb;
     void Start()
     {
-        rb.GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
     }
     Vector3 vel = new Vector3();
     
@@ -19,8 +22,13 @@ public class Ball : MonoBehaviour
     public void Move()
     {
         vel = gameObject.transform.position;
-        vel.z = vel.z + 10;
+        vel.z = vel.z + 30;
         rb.velocity = vel;
         Debug.Log(rb.velocity);
+    }
+
+    public void ChangeMaterial(Material m)
+    {
+        rend.sharedMaterial = m;
     }
 }
