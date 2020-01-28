@@ -138,6 +138,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 1342996110152920855, guid: f2961f209ab904b44a700fbec41ed18d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ball
+      objectReference: {fileID: 0}
     - target: {fileID: 8991005024440280956, guid: f2961f209ab904b44a700fbec41ed18d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -366,7 +371,7 @@ PrefabInstance:
     - target: {fileID: 4687910411343871378, guid: 39e33e21c1b4a2b488789b2dde16a953,
         type: 3}
       propertyPath: m_Name
-      value: Goal
+      value: Blue Goal
       objectReference: {fileID: 0}
     - target: {fileID: 5369472414822313007, guid: 39e33e21c1b4a2b488789b2dde16a953,
         type: 3}
@@ -508,6 +513,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 71.450005, y: 0, z: 0}
+--- !u!1 &1312235147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1312235149}
+  - component: {fileID: 1312235148}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1312235148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312235147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2595d4abceeaf8247bf195bd8e888a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackScore: 0
+  blueScore: 0
+  redScore: 0
+  ball: {fileID: 0}
+--- !u!4 &1312235149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312235147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6681677, y: -74.28466, z: 42.482338}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1324631376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -756,7 +808,7 @@ PrefabInstance:
     - target: {fileID: 4687910411343871378, guid: 39e33e21c1b4a2b488789b2dde16a953,
         type: 3}
       propertyPath: m_Name
-      value: Goal (1)
+      value: Black Goal
       objectReference: {fileID: 0}
     - target: {fileID: 5334411997276873033, guid: 39e33e21c1b4a2b488789b2dde16a953,
         type: 3}
@@ -914,7 +966,7 @@ PrefabInstance:
     - target: {fileID: 4687910411343871378, guid: 39e33e21c1b4a2b488789b2dde16a953,
         type: 3}
       propertyPath: m_Name
-      value: Goal (2)
+      value: Red Goal
       objectReference: {fileID: 0}
     - target: {fileID: 5334411997276873033, guid: 39e33e21c1b4a2b488789b2dde16a953,
         type: 3}

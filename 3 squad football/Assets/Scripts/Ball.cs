@@ -24,11 +24,25 @@ public class Ball : MonoBehaviour
         vel = gameObject.transform.position;
         vel.z = vel.z + 30;
         rb.velocity = vel;
-        Debug.Log(rb.velocity);
+    }
+
+    public void Respawn()
+    {
+        Instantiate(gameObject, new Vector3(0, 3, 0), Quaternion.identity);
+    }
+
+    public void Dissapear()
+    {
+        Destroy(gameObject);
     }
 
     public void ChangeMaterial(Material m)
     {
         rend.sharedMaterial = m;
+    }
+
+    public Material GetMaterial()
+    {
+        return rend.sharedMaterial;
     }
 }
