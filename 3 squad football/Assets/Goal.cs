@@ -24,6 +24,8 @@ public class Goal : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Black scored not in own goal. 
+        if (other.GetComponent<Ball>()!=null)
+        {
         if ((other.GetComponent<Ball>().GetMaterial().color == ballMaterials[1].color /*black*/) 
             && (rend.material.color != ballMaterials[1].color) /*Is not an own goal*/)
         {
@@ -58,6 +60,7 @@ public class Goal : MonoBehaviour
             GameManager.instance.RedScoredOwnGoal();
         }
 
+        }
 
     }
 
