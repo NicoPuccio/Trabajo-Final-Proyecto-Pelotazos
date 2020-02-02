@@ -6,10 +6,13 @@ public class Ball : MonoBehaviour
 {
     Renderer rend;
     private Rigidbody rb;
+    private BoxCollider bc;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rend = GetComponent<Renderer>();
+        bc = GetComponent<BoxCollider>();
         rend.enabled = true;
     }
     Vector3 vel = new Vector3();
@@ -28,13 +31,10 @@ public class Ball : MonoBehaviour
 
     public void Respawn()
     {
-        Instantiate(gameObject, new Vector3(0, 3, 0), Quaternion.identity);
+        rb.velocity = Vector3.zero;
+        gameObject.transform.position = new Vector3(0, 5, 0);
     }
 
-    public void Dissapear()
-    {
-        Destroy(gameObject);
-    }
 
     public void ChangeMaterial(Material m)
     {
@@ -44,5 +44,10 @@ public class Ball : MonoBehaviour
     public Material GetMaterial()
     {
         return rend.sharedMaterial;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        
     }
 }

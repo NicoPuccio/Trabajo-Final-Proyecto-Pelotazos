@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 1392544136}
+    - target: {fileID: -1486397486718135436, guid: f2961f209ab904b44a700fbec41ed18d,
+        type: 3}
+      propertyPath: newBall
+      value: 
+      objectReference: {fileID: 713278389}
     - target: {fileID: 1342996110152920855, guid: f2961f209ab904b44a700fbec41ed18d,
         type: 3}
       propertyPath: m_Name
@@ -361,6 +366,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &713278389 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1342996110152920855, guid: f2961f209ab904b44a700fbec41ed18d,
+    type: 3}
+  m_PrefabInstance: {fileID: 525545660}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &730732732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -368,6 +379,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 657880328, guid: 39e33e21c1b4a2b488789b2dde16a953, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f730cb513b35644ead85b57988b518a, type: 2}
     - target: {fileID: 4687910411343871378, guid: 39e33e21c1b4a2b488789b2dde16a953,
         type: 3}
       propertyPath: m_Name
@@ -542,10 +557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2595d4abceeaf8247bf195bd8e888a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackScore: 0
-  blueScore: 0
-  redScore: 0
-  ball: {fileID: 0}
 --- !u!4 &1312235149
 Transform:
   m_ObjectHideFlags: 0
@@ -805,6 +816,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 657880328, guid: 39e33e21c1b4a2b488789b2dde16a953, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 2100000, guid: b6ecfe9fb32d87644ad7f88b8c92c313, type: 2}
     - target: {fileID: 4687910411343871378, guid: 39e33e21c1b4a2b488789b2dde16a953,
         type: 3}
       propertyPath: m_Name
@@ -963,6 +978,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 657880328, guid: 39e33e21c1b4a2b488789b2dde16a953, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 2100000, guid: d50352caa3a32be42a969623958e9f67, type: 2}
     - target: {fileID: 4687910411343871378, guid: 39e33e21c1b4a2b488789b2dde16a953,
         type: 3}
       propertyPath: m_Name

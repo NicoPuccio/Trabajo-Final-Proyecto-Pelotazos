@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d375d798d79c9534683dc6ba89f3f6bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballMaterials:
+  material:
   - {fileID: 2100000, guid: 3f730cb513b35644ead85b57988b518a, type: 2}
   - {fileID: 2100000, guid: b6ecfe9fb32d87644ad7f88b8c92c313, type: 2}
   - {fileID: 2100000, guid: d50352caa3a32be42a969623958e9f67, type: 2}
