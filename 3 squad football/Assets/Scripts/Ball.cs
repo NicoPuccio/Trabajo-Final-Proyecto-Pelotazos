@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour
     Renderer rend;
     private Rigidbody rb;
     private BoxCollider bc;
+    public float impulseForce;
     
     void Start()
     {
@@ -24,9 +25,7 @@ public class Ball : MonoBehaviour
 
     public void Move()
     {
-        vel = gameObject.transform.position;
-        vel.z = vel.z + 30;
-        rb.velocity = vel;
+        rb.AddForce(transform.position * impulseForce, ForceMode.VelocityChange);
     }
 
     public void Respawn()

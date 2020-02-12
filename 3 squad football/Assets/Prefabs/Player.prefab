@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946927465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.012, z: 0.639}
+  m_LocalPosition: {x: 0, y: -0.455, z: 0.639}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5472179448754901426}
@@ -138,6 +138,9 @@ GameObject:
   - component: {fileID: 1601150467}
   - component: {fileID: 1601150468}
   - component: {fileID: 1601150473}
+  - component: {fileID: -8775231073581896962}
+  - component: {fileID: 825983915}
+  - component: {fileID: 949233247}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -247,13 +250,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5240110464421794110}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56001438a8d7c1a48adcae27b0b9f2ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  speed: 10
+  jumpForce: 10
+  speed: 5
 --- !u!114 &1601150473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,3 +276,49 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ball: {fileID: 0}
+--- !u!114 &-8775231073581896962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5240110464421794110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2adbe133fe3424ba356a1765d7a5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 50
+  startDashTime: 0.1
+--- !u!54 &825983915
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5240110464421794110}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
+--- !u!114 &949233247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5240110464421794110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86d1ee19dfe3834295638044d2bb329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 2
+  rotationSpeed: 5
+  jumpForce: 10
+  speed: 10

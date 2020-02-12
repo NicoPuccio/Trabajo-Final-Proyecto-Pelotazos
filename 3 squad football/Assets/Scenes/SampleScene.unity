@@ -138,6 +138,11 @@ PrefabInstance:
       propertyPath: newBall
       value: 
       objectReference: {fileID: 713278389}
+    - target: {fileID: -1486397486718135436, guid: f2961f209ab904b44a700fbec41ed18d,
+        type: 3}
+      propertyPath: impulseForce
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1342996110152920855, guid: f2961f209ab904b44a700fbec41ed18d,
         type: 3}
       propertyPath: m_Name
@@ -655,7 +660,7 @@ PrefabInstance:
     - target: {fileID: 1880828153507860448, guid: 75433b942c0beaf48a3827616ea5998e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.0000061546
       objectReference: {fileID: 0}
     - target: {fileID: 1880828153507860448, guid: 75433b942c0beaf48a3827616ea5998e,
         type: 3}
@@ -665,7 +670,7 @@ PrefabInstance:
     - target: {fileID: 1880828153507860448, guid: 75433b942c0beaf48a3827616ea5998e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.000012309
       objectReference: {fileID: 0}
     - target: {fileID: 1880828153507860448, guid: 75433b942c0beaf48a3827616ea5998e,
         type: 3}
@@ -710,12 +715,17 @@ PrefabInstance:
     - target: {fileID: 1880828153507860448, guid: 75433b942c0beaf48a3827616ea5998e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 35
+      value: 147.938
       objectReference: {fileID: 0}
     - target: {fileID: 1880828153507860448, guid: 75433b942c0beaf48a3827616ea5998e,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 35
+      value: 147.938
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880828153507860448, guid: 75433b942c0beaf48a3827616ea5998e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.42268
       objectReference: {fileID: 0}
     - target: {fileID: 5132157364682721598, guid: 75433b942c0beaf48a3827616ea5998e,
         type: 3}
@@ -1056,6 +1066,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8775231073581896962, guid: 9f3aa7f09068f8849b47651179710e16,
+        type: 3}
+      propertyPath: dashForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8775231073581896962, guid: 9f3aa7f09068f8849b47651179710e16,
+        type: 3}
+      propertyPath: dashDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 825983915, guid: 9f3aa7f09068f8849b47651179710e16, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5240110464421794110, guid: 9f3aa7f09068f8849b47651179710e16,
         type: 3}
       propertyPath: m_Name
