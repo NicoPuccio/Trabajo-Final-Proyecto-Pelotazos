@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
             //}
             if (Input.GetButtonDown("Dash"))
             {
-                rb.AddForce(0, 0, dashSpeed, ForceMode.VelocityChange);
+                rb.AddForce(direction * dashSpeed, ForceMode.VelocityChange);
 
             }
             
