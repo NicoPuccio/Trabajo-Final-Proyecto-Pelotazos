@@ -31,7 +31,7 @@ public class PlayerMovementVariant : MonoBehaviour
         //Move();
         if (cc.isGrounded)
         {
-            moveDirection = new Vector3(0, 0.0f, Input.GetAxisRaw("Vertical"));
+            moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= speed;
 
@@ -42,12 +42,12 @@ public class PlayerMovementVariant : MonoBehaviour
         }
         else
         {
-            moveDirection = new Vector3(0, moveDirection.y, Input.GetAxisRaw("Vertical"));
+            moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), moveDirection.y, Input.GetAxisRaw("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection.x *= speed;
             moveDirection.z *= speed;
         }
-        transform.Rotate(0, Input.GetAxisRaw("Horizontal") * rotationSpeed, 0);
+        //transform.Rotate(0, Input.GetAxisRaw("Horizontal") * rotationSpeed, 0);
         moveDirection.y -= gravity * Time.deltaTime;
         cc.Move(moveDirection * Time.deltaTime);
 

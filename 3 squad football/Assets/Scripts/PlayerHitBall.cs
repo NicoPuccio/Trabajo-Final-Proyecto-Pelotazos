@@ -19,7 +19,7 @@ public class PlayerHitBall : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Kick"))
         {
             HitBall();
         }

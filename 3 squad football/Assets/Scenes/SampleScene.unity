@@ -526,13 +526,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.5838929, y: -0, z: -0, w: 0.81183076}
-  m_LocalPosition: {x: 0, y: 26.63, z: -12.42}
+  m_LocalRotation: {x: 0.37109256, y: -0, z: -0, w: 0.92859596}
+  m_LocalPosition: {x: 0, y: 21.53, z: -22.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 71.450005, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 43.566, y: 0, z: 0}
 --- !u!1 &1312235147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,20 +1066,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8775231073581896962, guid: 9f3aa7f09068f8849b47651179710e16,
-        type: 3}
-      propertyPath: dashForce
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8775231073581896962, guid: 9f3aa7f09068f8849b47651179710e16,
-        type: 3}
-      propertyPath: dashDuration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 825983915, guid: 9f3aa7f09068f8849b47651179710e16, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5240110464421794110, guid: 9f3aa7f09068f8849b47651179710e16,
         type: 3}
       propertyPath: m_Name
@@ -1093,7 +1079,7 @@ PrefabInstance:
     - target: {fileID: 5472179448754901426, guid: 9f3aa7f09068f8849b47651179710e16,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.286
+      value: 1.48
       objectReference: {fileID: 0}
     - target: {fileID: 5472179448754901426, guid: 9f3aa7f09068f8849b47651179710e16,
         type: 3}
