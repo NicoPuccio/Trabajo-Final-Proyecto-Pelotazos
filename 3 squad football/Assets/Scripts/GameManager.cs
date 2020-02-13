@@ -5,9 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private GameObject[] goals;
-    private int blackScore = 20;
-    private int blueScore = 20;
-    private int redScore = 20;
+    private int player1Score = 0;
+    private int player2Score = 0;
     public static GameManager instance;
 
     private GameObject ball;
@@ -25,28 +24,19 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void ScoredInBlack()
+    public void Player1Scored()
     {
-        //ball.GetComponent<Ball>().Dissapear();
-        blackScore -= 1;
-        Debug.Log("Puntaje del equipo negro: " + blackScore);
-        ball.GetComponent<Ball>().Respawn();
-    }
-
-    public void ScoredInBlue()
-    {
-       
-        blueScore -= 1;
-        Debug.Log("Puntaje del equipo azul: " + blueScore);
-        ball.GetComponent<Ball>().Respawn();
+        player1Score += 1;
+        Debug.Log("Player 1 score: " + player1Score);
+        ball.GetComponent<Ball>().RespawnBall();
     }
     
-    public void ScoredInRed()
+    public void Player2Scored()
     {
-        
-        redScore -= 1;
-        Debug.Log("Puntaje del equipo rojo: " + redScore);
-        ball.GetComponent<Ball>().Respawn();
+        player2Score += 1;
+        Debug.Log("Player 2 score: " + player2Score);
+
+        ball.GetComponent<Ball>().RespawnBall();
     }
   
 }

@@ -23,13 +23,17 @@ public class Ball : MonoBehaviour
        
     }
 
-    public void Move()
+    public void RespawnBall()
     {
-        rb.AddForce(transform.position * impulseForce, ForceMode.VelocityChange);
+        StartCoroutine(Respawn());
     }
 
-    public void Respawn()
+    private IEnumerator Respawn()
     {
+        gameObject.transform.position = new Vector3(0, -10, 0);
+        rb.velocity = Vector3.zero;
+       
+        yield return new WaitForSeconds(2f);
         rb.velocity = Vector3.zero;
         gameObject.transform.position = new Vector3(0, 5, 0);
     }

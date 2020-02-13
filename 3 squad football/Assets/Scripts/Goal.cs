@@ -20,29 +20,19 @@ public class Goal : MonoBehaviour
     {
         
     }
-   
-    private void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision collision)
     {
-        //Black scored not in own goal. 
-        if (other.GetComponent<Ball>()!=null)
+        if (collision.collider.tag == "Ball")
         {
-        if (other.tag == "Ball" && rend.material.color == material[0].color) //blue
-        {
-            GameManager.instance.ScoredInBlue();
+            if (gameObject.tag == "Player1Goal")
+            {
+                GameManager.instance.Player2Scored();
+            }
+            else if (gameObject.tag == "Player2Goal")
+            {
+                GameManager.instance.Player1Scored();
+            }
         }
-        if (other.tag == "Ball" && rend.material.color == material[1].color)//black
-        {
-            GameManager.instance.ScoredInBlack();
-        }
-
-        if (other.tag == "Ball" && rend.material.color == material[2].color)//red
-        {
-            GameManager.instance.ScoredInRed();
-        }
-        
-        }
-
     }
-
-    
 }
