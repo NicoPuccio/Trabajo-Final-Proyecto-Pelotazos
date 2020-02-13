@@ -39,6 +39,7 @@ public class PlayerMovementVariant : MonoBehaviour
             {
                 moveDirection.y = jumpForce;
             }
+         
         }
         else
         {

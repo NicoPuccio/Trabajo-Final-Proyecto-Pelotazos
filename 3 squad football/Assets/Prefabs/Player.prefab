@@ -135,12 +135,10 @@ GameObject:
   - component: {fileID: 3669298991007146623}
   - component: {fileID: 1634197893872120373}
   - component: {fileID: 1245586459999617989}
-  - component: {fileID: 1601150467}
-  - component: {fileID: 1601150468}
   - component: {fileID: 1601150473}
   - component: {fileID: -8775231073581896962}
   - component: {fileID: 825983915}
-  - component: {fileID: 949233247}
+  - component: {fileID: 293243826}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -218,46 +216,13 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5240110464421794110}
-  m_Material: {fileID: 13400000, guid: c63169c815fced04b8418b4843affd05, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!143 &1601150467
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5240110464421794110}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1601150468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5240110464421794110}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56001438a8d7c1a48adcae27b0b9f2ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 2
-  jumpForce: 10
-  speed: 5
 --- !u!114 &1601150473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +271,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &949233247
+--- !u!114 &293243826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -315,10 +280,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5240110464421794110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f86d1ee19dfe3834295638044d2bb329, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dd27c12ace1d8941b2bea2ba6315390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
-  rotationSpeed: 5
-  jumpForce: 10
-  speed: 10
+  movementSpeed: 10
+  jumpForce: 5
+  rollSound: {fileID: 0}
+  isGrounded: 0
+  dashSpeed: 0

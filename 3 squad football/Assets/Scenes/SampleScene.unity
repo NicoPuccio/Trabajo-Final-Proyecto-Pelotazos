@@ -732,6 +732,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder Base
       objectReference: {fileID: 0}
+    - target: {fileID: 5132157364682721598, guid: 75433b942c0beaf48a3827616ea5998e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6080196965583024854, guid: 75433b942c0beaf48a3827616ea5998e,
         type: 3}
       propertyPath: m_Material
@@ -1066,6 +1071,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 293243826, guid: 9f3aa7f09068f8849b47651179710e16, type: 3}
+      propertyPath: isGrounded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293243826, guid: 9f3aa7f09068f8849b47651179710e16, type: 3}
+      propertyPath: dashSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5240110464421794110, guid: 9f3aa7f09068f8849b47651179710e16,
         type: 3}
       propertyPath: m_Name
@@ -1079,7 +1092,7 @@ PrefabInstance:
     - target: {fileID: 5472179448754901426, guid: 9f3aa7f09068f8849b47651179710e16,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.48
+      value: 2.66
       objectReference: {fileID: 0}
     - target: {fileID: 5472179448754901426, guid: 9f3aa7f09068f8849b47651179710e16,
         type: 3}
