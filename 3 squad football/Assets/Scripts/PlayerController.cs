@@ -62,7 +62,11 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(0, jumpForce, 0, ForceMode.VelocityChange);
         }
-        
+        if (Input.GetButtonDown("Dash"))
+        {
+            rb.AddForce(direction * dashSpeed, ForceMode.VelocityChange);
+
+        }
         if (horizontal != 0 || vertical != 0)
         {
             //AnimateMovement(true);
@@ -72,11 +76,7 @@ public class PlayerController : MonoBehaviour
             //    audioSource.Play();
             //    animator.SetTrigger("IsRolling");
             //}
-            if (Input.GetButtonDown("Dash"))
-            {
-                rb.AddForce(direction * dashSpeed, ForceMode.VelocityChange);
-
-            }
+            
             
             rb.rotation = Quaternion.LookRotation(direction);
             rb.MovePosition(rb.position + direction * movementSpeed * rollSpeed * Time.deltaTime);

@@ -35,7 +35,7 @@ public class Ball : MonoBehaviour
        
         yield return new WaitForSeconds(2f);
         rb.velocity = Vector3.zero;
-        gameObject.transform.position = new Vector3(0, 5, 0);
+        gameObject.transform.position = new Vector3(10, 5, 0); //respawn in center of the field
     }
 
 
