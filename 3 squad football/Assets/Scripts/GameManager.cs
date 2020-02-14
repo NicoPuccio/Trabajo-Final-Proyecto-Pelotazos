@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private int player1Score = 0;
     private int player2Score = 0;
     public static GameManager instance;
+    public float timer;
 
     private GameObject ball;
     
@@ -17,11 +18,17 @@ public class GameManager : MonoBehaviour
         goals = GameObject.FindGameObjectsWithTag("Goal");
         ball = GameObject.FindGameObjectWithTag("Ball");
         instance = this;
+        timer = 90f;
     }
 
     void Update()
     {
-        
+        DecreaseTimer();
+    }
+
+    private void DecreaseTimer()
+    {
+        timer -= Time.deltaTime;
     }
 
     public void Player1Scored()
