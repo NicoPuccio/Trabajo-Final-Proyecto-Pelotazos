@@ -5,16 +5,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //movement
     public float movementSpeed = 1f;
-    public float jumpForce = 10f;
-    public AudioClip rollSound;
+    private Rigidbody rb;
 
     private Animator animator;
     private AudioSource audioSource;
-    private Rigidbody rb;
-    private float rollSpeed = 1f;
+    
+    //jump
     public bool isGrounded;
+    public float jumpForce = 10f;
+    //dash
     public float dashSpeed;
+    private float dashTime;
+    public float startDashTime;
+    private bool pressed = false;
 
     //public PlayerNumber playerNumber
     //{
@@ -33,7 +38,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
-        
+        dashTime = startDashTime;
     }
 
     // Update is called once per frame
@@ -62,11 +67,26 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(0, jumpForce, 0, ForceMode.VelocityChange);
         }
-        if (Input.GetButtonDown("Dash"))
-        {
-            rb.AddForce(direction * dashSpeed, ForceMode.VelocityChange);
 
+        if (dashTime <= 0)
+        {
+            dashTime = startDashTime;
+            rb.velocity = Vector3.zero;
         }
+        if(Input.GetButtonDown("Dash"))
+        {
+            pressed = true;
+            rb.AddForce(direction * dashSpeed, ForceMode.VelocityChange);
+        }
+        if (pressed)
+        {
+            dashTime -= Time.deltaTime;
+            if (dashTime <= 0)
+            {
+                pressed = false;
+            }
+        }
+
         if (horizontal != 0 || vertical != 0)
         {
             //AnimateMovement(true);
@@ -79,7 +99,7 @@ public class PlayerController : MonoBehaviour
             
             
             rb.rotation = Quaternion.LookRotation(direction);
-            rb.MovePosition(rb.position + direction * movementSpeed * rollSpeed * Time.deltaTime);
+            rb.MovePosition(rb.position + direction * movementSpeed * Time.deltaTime);
             
         }
         else
@@ -101,20 +121,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void StartRolling()
-    {
-        rollSpeed = 1f;
-    }
+    //public void StartRolling()
+    //{
+    //    rollSpeed = 1f;
+    //}
 
-    public void MiddleRolling()
-    {
-        rollSpeed = 1.5f;
-    }
+    //public void MiddleRolling()
+    //{
+    //    rollSpeed = 1.5f;
+    //}
 
-    public void EndRolling()
-    {
-        rollSpeed = 1f;
-    }
+    //public void EndRolling()
+    //{
+    //    rollSpeed = 1f;
+    //}
 
     void OnCollisionEnter(Collision collisionInfo)
     {
