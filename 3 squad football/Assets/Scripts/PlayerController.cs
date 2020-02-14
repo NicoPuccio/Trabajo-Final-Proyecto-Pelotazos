@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //input
+    float horizontal;
+    float vertical;
+    Vector3 direction;
+    bool jump = false;
+    
     //movement
     public float movementSpeed = 1f;
     private Rigidbody rb;
@@ -23,9 +29,10 @@ public class PlayerController : MonoBehaviour
     public float dashSpeed;
     private float dashTime;
     public float startDashTime;
-    private bool pressed = false;
-
+    public bool dashing = false;
     
+
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -37,8 +44,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        //get inpuit in the update. not working well for dash and jump
+        GetInput();
+        Dash();
+        Jump();
         //SaveFromFall();
+    }
+
+    private void FixedUpdate()
+    {
+        //all physics movement is better in fixed update.
+        Movement();
+        
     }
 
     //void SaveFromFall()
@@ -49,36 +66,19 @@ public class PlayerController : MonoBehaviour
     //    }
     //}
 
+    void GetInput()
+    {
+        horizontal = Input.GetAxis(horizontalInput);
+        vertical = Input.GetAxis(verticalInput);
+        direction = new Vector3(horizontal, 0, vertical);
+    }
+
     void Movement()
     {
         // get input
-        float horizontal = Input.GetAxis(horizontalInput);
-        float vertical = Input.GetAxis(verticalInput);
-        Vector3 direction = new Vector3(horizontal, 0, vertical);
-        if (Input.GetButtonDown(jumpInput) && isGrounded)
-        {
-            rb.AddForce(0, jumpForce, 0, ForceMode.VelocityChange);
-        }
-
-        if (dashTime <= 0)
-        {
-            dashTime = startDashTime;
-            rb.velocity = Vector3.zero;
-        }
-        if(Input.GetButtonDown(dashInput))
-        {
-            pressed = true;
-            rb.AddForce(direction * dashSpeed, ForceMode.VelocityChange);
-        }
-        if (pressed)
-        {
-            dashTime -= Time.deltaTime;
-            if (dashTime <= 0)
-            {
-                pressed = false;
-            }
-        }
-
+        //dash
+        
+        //movement
         if (horizontal != 0 || vertical != 0)
         {
             rb.rotation = Quaternion.LookRotation(direction);
@@ -90,6 +90,35 @@ public class PlayerController : MonoBehaviour
         //}
     }
 
+    private void Dash()
+    {
+        if (dashTime <= 0)
+        {
+            dashTime = startDashTime;
+            rb.velocity = Vector3.zero;
+        }
+        if (Input.GetButtonDown(dashInput))
+        {
+            dashing = true;
+            rb.AddForce(direction * dashSpeed, ForceMode.VelocityChange);
+        }
+        if (dashing)
+        {
+            dashTime -= Time.deltaTime;
+            if (dashTime <= 0)
+            {
+                dashing = false;
+            }
+        }
+    }
+    private void Jump()
+    {
+        //jump
+        if (Input.GetButtonDown(jumpInput) && isGrounded)
+        {
+            rb.AddForce(0, jumpForce, 0, ForceMode.VelocityChange);
+        }
+    }
     //private void AnimateMovement(bool moving)
     //{
     //    if (animator)
@@ -102,7 +131,7 @@ public class PlayerController : MonoBehaviour
         if(collisionInfo.collider.tag == "Ground")
             isGrounded = true;
     }
-
+    
     void OnCollisionExit(Collision collisionInfo)
     {
         if (collisionInfo.collider.tag == "Ground")

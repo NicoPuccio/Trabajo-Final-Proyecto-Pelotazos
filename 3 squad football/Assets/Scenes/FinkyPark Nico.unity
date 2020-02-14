@@ -1664,7 +1664,7 @@ PrefabInstance:
     - target: {fileID: 5537179005738800825, guid: 448d3dc8ca59de241a602454afad6edf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.66
+      value: 22.24
       objectReference: {fileID: 0}
     - target: {fileID: 5537179005738800825, guid: 448d3dc8ca59de241a602454afad6edf,
         type: 3}
@@ -1741,6 +1741,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 518008243, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 518008249, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
       propertyPath: m_Time
       value: 0.1
@@ -1755,7 +1759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4935240531098310, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.43
+      value: 6.85
       objectReference: {fileID: 0}
     - target: {fileID: 4935240531098310, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5536,6 +5540,7 @@ MonoBehaviour:
   jumpForce: 10
   dashSpeed: 10
   startDashTime: 0
+  dashing: 0
 --- !u!54 &1020280073
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8056,6 +8061,11 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 2.63
       objectReference: {fileID: 0}
+    - target: {fileID: 7304718665470779382, guid: 5bf8e79669d093e41a79865718497a54,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7539951198466374421, guid: 5bf8e79669d093e41a79865718497a54,
         type: 3}
       propertyPath: m_Material
@@ -8066,7 +8076,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 431d3f3310498c2488a88bac6acf6f84, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7304718665470779382, guid: 5bf8e79669d093e41a79865718497a54, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5bf8e79669d093e41a79865718497a54, type: 3}
 --- !u!1001 &1381704325
 PrefabInstance:
@@ -10977,6 +10988,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2595d4abceeaf8247bf195bd8e888a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1Score: 0
+  player2Score: 0
   timer: 0
 --- !u!4 &1916497870
 Transform:
