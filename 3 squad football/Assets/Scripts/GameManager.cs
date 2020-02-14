@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private GameObject[] goals;
-    private int player1Score = 0;
-    private int player2Score = 0;
+    public int player1Score = 0;
+    public int player2Score = 0;
     public static GameManager instance;
     public float timer;
 
