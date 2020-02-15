@@ -23,7 +23,18 @@ public class UIManager : MonoBehaviour
 
     public void ShowWinner()
     {
-        //to do
+        if (GameManager.instance.player1Score > GameManager.instance.player2Score)
+        {
+            Debug.Log("Player 1 Victory!");
+        }
+        else if (GameManager.instance.player1Score > GameManager.instance.player2Score)
+        {
+            Debug.Log("Player 2 Victory!");
+        }
+        else
+        {
+            Debug.Log("It's a tie! Everyone looses");
+        }
     }
 
     public void ShowGol()
@@ -35,8 +46,8 @@ public class UIManager : MonoBehaviour
 
     public void ShowTimer()
     {
-        var minutes = Mathf.Floor((GameManager.instance.timer % 3600) / 60).ToString("00"); /*((int)time / 60).ToString();*/
-        var seconds = (GameManager.instance.timer % 60).ToString("00");
+        var minutes = Mathf.Floor((GameManager.instance.gameTimer % 3600) / 60).ToString("00"); /*((int)time / 60).ToString();*/
+        var seconds = (GameManager.instance.gameTimer % 60).ToString("00");
         timer.text = minutes + ":" + seconds;
     }
 
