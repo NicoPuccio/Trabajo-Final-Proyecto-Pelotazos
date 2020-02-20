@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public string jumpInput = "Jump";
     public string dashInput = "Dash";
 
-    private Animator animator;
+    //audio
     private AudioSource audioSource;
     
     //jump
@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     private float dashTime;
     public float startDashTime;
     public bool dashing = false;
+
+    //anim
+    private Animator animator;
     
 
 
