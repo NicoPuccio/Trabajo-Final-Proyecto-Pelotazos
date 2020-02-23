@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     //jump
     public bool isGrounded;
     public float jumpForce = 10f;
+    private bool isJumping = false;
     //dash
     public float dashSpeed;
     private float dashTime;
@@ -51,6 +52,7 @@ public class PlayerController : MonoBehaviour
         GetInput();
         Dash();
         Jump();
+        Animate();
         //SaveFromFall();
     }
 
@@ -74,6 +76,28 @@ public class PlayerController : MonoBehaviour
         horizontal = Input.GetAxis(horizontalInput);
         vertical = Input.GetAxis(verticalInput);
         direction = new Vector3(horizontal, 0, vertical);
+    }
+
+    void Animate()
+    {
+        if (animator == null) return;
+
+        if (horizontal != 0 || vertical != 0)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
+        if (isJumping)
+        {
+            animator.SetBool("isJumping", true);
+        }
+        else
+        {
+            animator.SetBool("isJumping", false);
+        }
     }
 
     void Movement()
@@ -119,7 +143,12 @@ public class PlayerController : MonoBehaviour
         //jump
         if (Input.GetButtonDown(jumpInput) && isGrounded)
         {
+            isJumping = true;
             rb.AddForce(0, jumpForce, 0, ForceMode.VelocityChange);
+        }
+        else if (isGrounded == true)
+        {
+            isJumping = false;
         }
     }
     //private void AnimateMovement(bool moving)
