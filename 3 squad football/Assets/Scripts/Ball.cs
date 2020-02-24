@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour
     private Rigidbody rb;
     private BoxCollider bc;
     public float impulseForce;
+    private Vector3 startPosition;
     
     void Start()
     {
@@ -20,12 +21,20 @@ public class Ball : MonoBehaviour
     
     void Update()
     {
-       
+        SaveFromFall();
     }
 
     public void RespawnBall()
     {
         StartCoroutine(Respawn());
+    }
+
+    private void SaveFromFall()
+    {
+        if (transform.position.y < 0)
+        {
+            transform.position = startPosition;
+        }
     }
 
     private IEnumerator Respawn()

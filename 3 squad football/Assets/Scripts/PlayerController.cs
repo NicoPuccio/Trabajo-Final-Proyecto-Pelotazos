@@ -31,11 +31,13 @@ public class PlayerController : MonoBehaviour
     private float dashTime;
     public float startDashTime;
     public bool dashing = false;
+    private float dashCooldown = 0f;
+    public float startDashCooldown = 1f;
 
     //anim
     private Animator animator;
-    
-
+    //bug catcher
+    private Vector3 startPosition;
 
     void Start()
     {
@@ -43,6 +45,7 @@ public class PlayerController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         dashTime = startDashTime;
+        startPosition = gameObject.transform.position;
     }
 
     // Update is called once per frame
@@ -53,7 +56,7 @@ public class PlayerController : MonoBehaviour
         Dash();
         Jump();
         Animate();
-        //SaveFromFall();
+        SaveFromFall();
     }
 
     private void FixedUpdate()
@@ -63,13 +66,13 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    //void SaveFromFall()
-    //{
-    //    if (transform.position.y < 0)
-    //    {
-    //        transform.position = new Vector3(0, 1, -6);
-    //    }
-    //}
+    void SaveFromFall()
+    {
+        if (transform.position.y < 0)
+        {
+            transform.position = startPosition;
+        }
+    }
 
     void GetInput()
     {
@@ -124,8 +127,7 @@ public class PlayerController : MonoBehaviour
         //    AnimateMovement(false);
         //}
     }
-    private float dashCooldown = 0f;
-    public float startDashCooldown = 1f;
+    
     private void Dash()
     {
         if (dashCooldown < 0)
