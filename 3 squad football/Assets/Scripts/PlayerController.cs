@@ -98,6 +98,14 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isJumping", false);
         }
+        if (dashing)
+        {
+            animator.SetBool("isDashing", true);
+        }
+        else
+        {
+            animator.SetBool("isDashing", false);
+        }
     }
 
     void Movement()
@@ -116,18 +124,25 @@ public class PlayerController : MonoBehaviour
         //    AnimateMovement(false);
         //}
     }
-
+    private float dashCooldown = 0f;
+    public float startDashCooldown = 1f;
     private void Dash()
     {
+        if (dashCooldown < 0)
+        {
+            dashCooldown = 0;
+        }
         if (dashTime <= 0)
         {
             dashTime = startDashTime;
             rb.velocity = Vector3.zero;
         }
-        if (Input.GetButtonDown(dashInput))
+        if (Input.GetButtonDown(dashInput) && dashCooldown <= 0)
         {
-            dashing = true;
+            
+            dashCooldown = startDashCooldown;
             rb.AddForce(direction * dashSpeed, ForceMode.VelocityChange);
+            dashing = true;
         }
         if (dashing)
         {
@@ -137,6 +152,11 @@ public class PlayerController : MonoBehaviour
                 dashing = false;
             }
         }
+        if (dashCooldown > 0)
+        {
+            dashCooldown -= Time.deltaTime;
+        }
+        
     }
     private void Jump()
     {
