@@ -21,7 +21,7 @@ public class Ball : MonoBehaviour
     
     void Update()
     {
-        SaveFromFall();
+       // SaveFromFall();
     }
 
     public void RespawnBall()
