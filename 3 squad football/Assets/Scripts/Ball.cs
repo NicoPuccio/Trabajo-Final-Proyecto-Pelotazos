@@ -17,7 +17,7 @@ public class Ball : MonoBehaviour
         bc = GetComponent<BoxCollider>();
         rend.enabled = true;
     }
-    Vector3 vel = new Vector3();
+    
     
     void Update()
     {
