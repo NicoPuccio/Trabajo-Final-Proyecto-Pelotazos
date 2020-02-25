@@ -6,6 +6,7 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
+
     private GameObject[] goals;
     public int player1Score = 0;
     public int player2Score = 0;
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
         gameTimer = 90f;
         StartCoroutine(GameCicle());
         ui = GetComponent<UIManager>();
+        inGame = true;
     }
 
     void Update()
@@ -72,11 +74,11 @@ public class GameManager : MonoBehaviour
         string winner = "empate";
         if (player1Score< player2Score)
         {
-            winner = "Gana jugador 2";
+            winner = "Ganador jugador rojo";
         }
         else if (player1Score>player2Score)
         {
-            winner = "Gana jugador 1";
+            winner = "Ganador jugador azul";
         }
 
         return winner;
@@ -84,7 +86,7 @@ public class GameManager : MonoBehaviour
 
     public int numberwinner()
     {
-        int winner = 0;
+        int winner = 2;
         if (player1Score < player2Score)
         {
             winner = 1;

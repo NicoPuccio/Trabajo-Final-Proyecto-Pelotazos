@@ -14,6 +14,13 @@ public class UIManager : MonoBehaviour
     public Sprite[] winbanner;
     public string whoWin;
     public Text wintext;
+    public GameObject wincup;
+    bool isGol;
+    public float timergolpanel;
+    public GameObject Gol;
+
+    public Text player1FinalScore;
+    public Text player2FinalScore;
 
     private void Start()
     {
@@ -35,13 +42,35 @@ public class UIManager : MonoBehaviour
         winnerCartel.SetActive(true);
         banner.sprite = winbanner[nrojugador];
         wintext.text = winner;
+        if (nrojugador != 2)
+        {
+            wincup.SetActive(true);
+        }
+        else
+        {
+            wincup.SetActive(false);
+        }
+        player1FinalScore.text = golPlayer1.text;
+        player2FinalScore.text = golPlayer2.text;
+
         Debug.Log(winner);
     }
 
-    public void ShowGol()
+    public void ShowGol(int nro)
     {
-        gol.color =Color.blue;
-        gol.color =Color.red;
+        if (nro == 0)
+        {
+            gol.color = Color.blue;
+            isGol = true;
+        }
+        else
+        {
+            gol.color = Color.red;
+            isGol = true;
+
+        }
+       
+       
         //2849FF blue
         //to do
     }
@@ -57,6 +86,19 @@ public class UIManager : MonoBehaviour
     {
         UpdateStats();
         ShowTimer();
+        if (isGol)
+        {
+            timergolpanel += Time.deltaTime;
+            Gol.SetActive(true);
+            if (timergolpanel > 3)
+            {
+                Gol.SetActive(false);
+                timergolpanel = 0;
+                isGol = false;
+            }
+            
+        }
+        
     }
 
 }

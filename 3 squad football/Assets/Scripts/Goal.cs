@@ -9,6 +9,7 @@ public class Goal : MonoBehaviour
     public Material[] material; // blue black red
     private Renderer rend;
     private GameObject ball;
+    public UIManager ui;
     void Start()
     {
         rend = GetComponent<Renderer>();
@@ -28,10 +29,12 @@ public class Goal : MonoBehaviour
             if (gameObject.tag == "Player1Goal")
             {
                 GameManager.instance.Player2Scored();
+                ui.ShowGol(1);
             }
             else if (gameObject.tag == "Player2Goal")
             {
                 GameManager.instance.Player1Scored();
+                ui.ShowGol(0);
             }
         }
     }

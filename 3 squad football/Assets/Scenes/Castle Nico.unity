@@ -1860,6 +1860,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.622062, y: 0.5853239, z: 0.6134875}
   m_Center: {x: 0.06492775, y: -0.020235434, z: -0.0049705356}
+--- !u!1 &560063305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 148690767, guid: 6fe279ff03078ab4abd23a8237b324c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1201009631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &570534925 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 182478, guid: 9b9c0b10fe0d99145879926e2e073076,
@@ -2302,6 +2308,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 830010301007527045, guid: ba24645415b6de642b046ab85f8a45a8,
+        type: 3}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 1916497871}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba24645415b6de642b046ab85f8a45a8, type: 3}
 --- !u!1 &726047517 stripped
@@ -2465,6 +2476,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5b36acce6532f478dcbc6418a52d68, type: 3}
+--- !u!114 &741617635 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 741617635, guid: 6fe279ff03078ab4abd23a8237b324c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1201009631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &743043994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2690269410591385404, guid: 6fe279ff03078ab4abd23a8237b324c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1201009631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &745027639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3201,6 +3230,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5b36acce6532f478dcbc6418a52d68, type: 3}
+--- !u!114 &938089971 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 938089971, guid: 6fe279ff03078ab4abd23a8237b324c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1201009631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &953844547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3462,6 +3503,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1359354260535586256, guid: bcb5133fea38e774397255cae15ea7ad,
+        type: 3}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 1916497871}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcb5133fea38e774397255cae15ea7ad, type: 3}
 --- !u!1001 &992370359
@@ -4798,6 +4844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: []
+  ui: {fileID: 0}
 --- !u!4 &1239015452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400008, guid: c52a1ad28de5ec447a225e11be0fe132,
@@ -4989,7 +5036,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1201009631}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 743043994}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -7391,8 +7438,14 @@ MonoBehaviour:
   winbanner:
   - {fileID: 2650913928579206598, guid: 5f5e6658c0383e84fbea89f592e22e33, type: 3}
   - {fileID: 2623842405590999597, guid: 5f5e6658c0383e84fbea89f592e22e33, type: 3}
+  - {fileID: -3437793893008713290, guid: 07bc6f995a2421c4ea4197e162ef5340, type: 3}
   whoWin: 
   wintext: {fileID: 2036182880}
+  wincup: {fileID: 560063305}
+  timergolpanel: 0
+  Gol: {fileID: 743043994}
+  player1FinalScore: {fileID: 741617635}
+  player2FinalScore: {fileID: 938089971}
 --- !u!114 &1916497872
 MonoBehaviour:
   m_ObjectHideFlags: 0
