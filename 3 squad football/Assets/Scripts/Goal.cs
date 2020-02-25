@@ -36,6 +36,8 @@ public class Goal : MonoBehaviour
                 GameManager.instance.Player1Scored();
                 ui.ShowGol(0);
             }
+
+            GameManager.instance.PlayGolSound();
         }
     }
 }

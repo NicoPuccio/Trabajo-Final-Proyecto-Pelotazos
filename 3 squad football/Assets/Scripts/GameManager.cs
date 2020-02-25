@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public string endGameScene;
     private UIManager ui;
     public bool inGame;
+    public AudioSource gol;
+    public AudioSource finalgame;
    // public GameObject 
 
     private void Start()
@@ -106,12 +108,20 @@ public class GameManager : MonoBehaviour
             DecreaseTimer();
             yield return null;
         }
-
+        PlayEndGame();
         ui.ShowWinner(PlayerWinner(), numberwinner());
         gameTimer = 0;
         StopCoroutine(GameCicle());
         inGame = false;
+      
     }
 
-
+    public void PlayGolSound()
+    {
+        gol.Play();
+    }
+    public void PlayEndGame()
+    {
+        finalgame.Play();
+    }
 }
