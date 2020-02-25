@@ -39,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
+        if (GameManager.instance.inGame)
+        {
+
         Vector2 movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
 
@@ -71,5 +74,6 @@ public class PlayerMovement : MonoBehaviour
         currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, SpeedSmoothTime);
 
         cc.Move(desiredMoveDirection * currentSpeed * Time.deltaTime);
+        }
     }
 }

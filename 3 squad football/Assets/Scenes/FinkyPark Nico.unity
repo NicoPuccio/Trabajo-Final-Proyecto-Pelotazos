@@ -9202,6 +9202,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fe279ff03078ab4abd23a8237b324c4, type: 3}
+--- !u!114 &1486948559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2036182880, guid: 6fe279ff03078ab4abd23a8237b324c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1486948558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1486948560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 423437537, guid: 6fe279ff03078ab4abd23a8237b324c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1486948558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1486948561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1357974353, guid: 6fe279ff03078ab4abd23a8237b324c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1486948558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1501689304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a0873148ac8296f43bcd8ca9f39271e3,
@@ -11361,6 +11391,7 @@ MonoBehaviour:
   player2Score: 0
   gameTimer: 0
   endGameScene: Menu
+  inGame: 0
 --- !u!4 &1916497870
 Transform:
   m_ObjectHideFlags: 0
@@ -11391,6 +11422,13 @@ MonoBehaviour:
   golPlayer2: {fileID: 2084165240}
   timer: {fileID: 273677946}
   gol: {fileID: 879751519}
+  winnerCartel: {fileID: 1486948561}
+  banner: {fileID: 1486948560}
+  winbanner:
+  - {fileID: 2650913928579206598, guid: 5f5e6658c0383e84fbea89f592e22e33, type: 3}
+  - {fileID: 2623842405590999597, guid: 5f5e6658c0383e84fbea89f592e22e33, type: 3}
+  whoWin: 
+  wintext: {fileID: 1486948559}
 --- !u!1001 &1920580761
 PrefabInstance:
   m_ObjectHideFlags: 0

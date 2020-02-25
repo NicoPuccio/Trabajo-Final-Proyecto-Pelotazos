@@ -9,7 +9,16 @@ public class UIManager : MonoBehaviour
     public Text golPlayer2;
     public Text timer;
     public Text gol;
+    public GameObject winnerCartel;
+    public Image banner;
+    public Sprite[] winbanner;
+    public string whoWin;
+    public Text wintext;
 
+    private void Start()
+    {
+        winnerCartel.SetActive(false);
+    }
     public void UpdateStats()
     {
         golPlayer1.text = GameManager.instance.player1Score.ToString();
@@ -21,25 +30,18 @@ public class UIManager : MonoBehaviour
         //to do
     }
 
-    public void ShowWinner()
+    public void ShowWinner(string winner, int nrojugador)
     {
-        if (GameManager.instance.player1Score > GameManager.instance.player2Score)
-        {
-            Debug.Log("Player 1 Victory!");
-        }
-        else if (GameManager.instance.player1Score > GameManager.instance.player2Score)
-        {
-            Debug.Log("Player 2 Victory!");
-        }
-        else
-        {
-            Debug.Log("It's a tie! Everyone looses");
-        }
+        winnerCartel.SetActive(true);
+        banner.sprite = winbanner[nrojugador];
+        wintext.text = winner;
+        Debug.Log(winner);
     }
 
     public void ShowGol()
     {
         gol.color =Color.blue;
+        gol.color =Color.red;
         //2849FF blue
         //to do
     }

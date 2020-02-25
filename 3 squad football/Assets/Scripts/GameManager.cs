@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class GameManager : MonoBehaviour
     private GameObject ball;
     public string endGameScene;
     private UIManager ui;
-    
+    public bool inGame;
+   // public GameObject 
 
     private void Start()
     {
@@ -22,13 +24,18 @@ public class GameManager : MonoBehaviour
         ball = GameObject.FindGameObjectWithTag("Ball");
         instance = this;
         gameTimer = 90f;
+        StartCoroutine(GameCicle());
         ui = GetComponent<UIManager>();
     }
 
     void Update()
     {
-        DecreaseTimer();
-        StartCoroutine(EndGame());
+        //DecreaseTimer();
+        //StartCoroutine(EndGame());
+        if (!inGame && Input.GetButton("Start"))
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 
     private void DecreaseTimer()
@@ -59,4 +66,50 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(endGameScene);
         }
     }
+
+    public string PlayerWinner()
+    {
+        string winner = "empate";
+        if (player1Score< player2Score)
+        {
+            winner = "Gana jugador 2";
+        }
+        else if (player1Score>player2Score)
+        {
+            winner = "Gana jugador 1";
+        }
+
+        return winner;
+    }
+
+    public int numberwinner()
+    {
+        int winner = 0;
+        if (player1Score < player2Score)
+        {
+            winner = 1;
+        }
+        else if (player1Score > player2Score)
+        {
+            winner = 0;
+        }
+
+        return winner;
+    }
+    IEnumerator GameCicle()
+    {
+        gameTimer = 90f;
+        while (gameTimer > 0)
+        {
+            DecreaseTimer();
+            yield return null;
+        }
+
+        ui.ShowWinner(PlayerWinner(), numberwinner());
+        gameTimer = 0;
+        StopCoroutine(GameCicle());
+        inGame = false;
+    }
+
+
 }
