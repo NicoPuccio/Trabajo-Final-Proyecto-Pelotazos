@@ -23,10 +23,11 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        gameTimer = PlayerPrefs.GetFloat("GameDuration")/*90f*/;
         goals = GameObject.FindGameObjectsWithTag("Goal");
         ball = GameObject.FindGameObjectWithTag("Ball");
         instance = this;
-        gameTimer = 90f;
+      
         StartCoroutine(GameCicle());
         ui = GetComponent<UIManager>();
         inGame = true;
@@ -102,7 +103,9 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator GameCicle()
     {
-        gameTimer = 90f;
+        // gameTimer = 90f;
+
+        gameTimer = PlayerPrefs.GetFloat("GameDuration")/*90f*/;
         while (gameTimer > 0)
         {
             DecreaseTimer();

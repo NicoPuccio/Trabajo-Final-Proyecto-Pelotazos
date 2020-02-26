@@ -21,10 +21,12 @@ public class UIManager : MonoBehaviour
 
     public Text player1FinalScore;
     public Text player2FinalScore;
+    public GameObject pausePanel;
 
     private void Start()
     {
         winnerCartel.SetActive(false);
+        pausePanel.SetActive(false);
     }
     public void UpdateStats()
     {
@@ -100,5 +102,15 @@ public class UIManager : MonoBehaviour
         }
         
     }
+
+    public void ShowPauseMenu()
+    {
+        pausePanel.SetActive(true);
+    }
+    public void StopShowPauseMenu()
+    {
+        pausePanel.SetActive(false);
+    }
+
 
 }

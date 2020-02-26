@@ -2,34 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
-public class MapSelectorManager : MonoBehaviour
+public class DurationSelect : MonoBehaviour
 {
-
+    float Time = 120f;
+    public string[] times;
+    public float[] timeduration;
+    int index;
     public float horizontal;
-    public Sprite[] mapImage;
-    public string[] mapNames;
-    public Image currentMap;
-     public string mapName;
-    public Button Play;
-    public int index;
     public bool delay;
-
     public bool ready;
+    public Button Play;
+    public string currentTime;
+    public Text timeActual;
 
-    private void Start()
+    void Start()
     {
-        currentMap.sprite = mapImage[0];
-        //mapName.text = mapNames[0];
-       // Play.Select();
-        mapName = mapNames[index];
+        Time = timeduration[index];
+        SetTime();
     }
 
-    void Update()
+    public void SetTime(/*float time*/)
+    {
+        PlayerPrefs.SetFloat("GameDuration", Time);
+    }
+
+    private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-
         if (horizontal == 1 && !delay || horizontal == -1 && !delay)
         {
             GiveMeIndex();
@@ -42,7 +42,6 @@ public class MapSelectorManager : MonoBehaviour
         {
             Play.Select();
         }
-
     }
 
     public int GiveMeIndex()
@@ -51,7 +50,7 @@ public class MapSelectorManager : MonoBehaviour
         index += (int)horizontal;
         Normalizar();
         StartCoroutine(Delay());
-        ChangeMap();
+        ChangeTime();
         return index;
     }
 
@@ -59,9 +58,9 @@ public class MapSelectorManager : MonoBehaviour
     {
         if (index < 0)
         {
-            index = 2;
+            index = 4;
         }
-        if (index > 2)
+        if (index > 4)
         {
             index = 0;
         }
@@ -76,17 +75,12 @@ public class MapSelectorManager : MonoBehaviour
         delay = false;
     }
 
-    public void LoadLevel()
-    {
-        SceneManager.LoadScene(mapName);
-    }
-
-    public void ChangeMap()
+    public void ChangeTime()
     {
         StartCoroutine(Delay());
-        currentMap.sprite = mapImage[index];
-        mapName = mapNames[index];
-        //index++;
+        currentTime = times[index];
+        timeActual.text = currentTime;
+        Time = timeduration[index];
     }
 
 

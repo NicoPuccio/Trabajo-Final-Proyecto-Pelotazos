@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
 
     public GameObject Menu;
     public GameObject MapSelector;
+    public GameObject durationSelector;
     public bool selectmap;
 
 
@@ -14,6 +15,7 @@ public class MenuManager : MonoBehaviour
     {
         Menu.SetActive(true);
         MapSelector.SetActive(false);
+        durationSelector.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,7 +26,15 @@ public class MenuManager : MonoBehaviour
             Menu.SetActive(true);
             selectmap = false;
         }
+
         
+    }
+
+    public void SelectDuration()
+    {
+        Menu.SetActive(false);
+        MapSelector.SetActive(false);
+        durationSelector.SetActive(true);
     }
 
     public void SelectMap()
