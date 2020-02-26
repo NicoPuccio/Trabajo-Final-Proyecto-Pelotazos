@@ -189,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Music
+  m_Text: Musicalizacion
 --- !u!222 &82845316
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -409,7 +409,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game designer/programmer
+  m_Text: Game designer/Programador
 --- !u!222 &628101832
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -683,7 +683,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Art/Programmer
+  m_Text: Arte/Programadora
 --- !u!222 &1300379099
 CanvasRenderer:
   m_ObjectHideFlags: 0
