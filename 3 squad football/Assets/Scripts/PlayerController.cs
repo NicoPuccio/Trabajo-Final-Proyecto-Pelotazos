@@ -182,6 +182,7 @@ public class PlayerController : MonoBehaviour
     //}
     void OnCollisionEnter(Collision collisionInfo)
     {
+
         if(collisionInfo.collider.tag == "Ground")
             isGrounded = true;
     }
@@ -191,4 +192,6 @@ public class PlayerController : MonoBehaviour
         if (collisionInfo.collider.tag == "Ground")
             isGrounded = false;
     }
+
+    
 }

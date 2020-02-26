@@ -44,7 +44,7 @@ public class Ball : MonoBehaviour
        
         yield return new WaitForSeconds(2f);
         rb.velocity = Vector3.zero;
-        gameObject.transform.position = new Vector3(Random.Range(6.5f,14), 7, Random.Range(-11, 2.5f)); //respawn in center of the field
+        gameObject.transform.position = new Vector3(Random.Range(6.5f,14), 7, Random.Range(-11, 0f)); //respawn in center of the field
     }
 
 

@@ -2283,10 +2283,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1601616303, guid: e618c1d7c2d81f4409891a27e8f50a0c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5016204292526748495, guid: e618c1d7c2d81f4409891a27e8f50a0c,
         type: 3}
       propertyPath: m_Name
       value: Blue Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200393415603275565, guid: e618c1d7c2d81f4409891a27e8f50a0c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8342490474309632348, guid: e618c1d7c2d81f4409891a27e8f50a0c,
         type: 3}
@@ -8089,6 +8098,7 @@ GameObject:
   - component: {fileID: 1916497872}
   - component: {fileID: 1916497873}
   - component: {fileID: 1916497874}
+  - component: {fileID: 1916497875}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -8365,6 +8375,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1916497875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916497868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe7c293bab470d469d49d112a5f44d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1917400633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 113238, guid: 2a5b838373a77634780f8f0c5d525720,
