@@ -30,48 +30,6 @@ CapsuleCollider:
   m_Height: 1.6279104
   m_Direction: 1
   m_Center: {x: -0.019968748, y: 0.70754325, z: 0}
---- !u!95 &1601616301
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5016204292526748495}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f357201a6eb318048ae1123f1b110f8a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1601616302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5016204292526748495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dd27c12ace1d8941b2bea2ba6315390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 10
-  horizontalInput: Horizontal
-  verticalInput: Vertical
-  jumpInput: Jump
-  dashInput: Dash
-  isGrounded: 0
-  jumpForce: 6.5
-  dashSpeed: 30
-  startDashTime: 0.1
-  dashing: 0
-  startDashCooldown: 1
 --- !u!96 &938584790
 TrailRenderer:
   serializedVersion: 2
@@ -223,6 +181,48 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!95 &1601616301
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5016204292526748495}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f357201a6eb318048ae1123f1b110f8a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1601616302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5016204292526748495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd27c12ace1d8941b2bea2ba6315390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 10
+  horizontalInput: Horizontal
+  verticalInput: Vertical
+  jumpInput: Jump
+  dashInput: Dash
+  isGrounded: 0
+  jumpForce: 6.5
+  dashSpeed: 30
+  startDashTime: 0.1
+  dashing: 0
+  startDashCooldown: 1
 --- !u!1001 &3944254063366367814
 PrefabInstance:
   m_ObjectHideFlags: 0

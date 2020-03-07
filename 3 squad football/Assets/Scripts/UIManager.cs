@@ -69,7 +69,6 @@ public class UIManager : MonoBehaviour
         {
             gol.color = Color.red;
             isGol = true;
-
         }
        
        
@@ -92,13 +91,12 @@ public class UIManager : MonoBehaviour
         {
             timergolpanel += Time.deltaTime;
             Gol.SetActive(true);
-            if (timergolpanel > 3)
+            if (timergolpanel > 1.5f)
             {
                 Gol.SetActive(false);
                 timergolpanel = 0;
                 isGol = false;
             }
-            
         }
         
     }
