@@ -6,7 +6,6 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
-
     private GameObject[] goals;
     public int player1Score = 0;
     public int player2Score = 0;
@@ -19,7 +18,6 @@ public class GameManager : MonoBehaviour
     public bool inGame;
     public AudioSource gol;
     public AudioSource finalgame;
-   // public GameObject 
 
     private void Start()
     {
@@ -27,7 +25,6 @@ public class GameManager : MonoBehaviour
         goals = GameObject.FindGameObjectsWithTag("Goal");
         ball = GameObject.FindGameObjectWithTag("Ball");
         instance = this;
-      
         StartCoroutine(GameCicle());
         ui = GetComponent<UIManager>();
         inGame = true;
@@ -35,8 +32,6 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        //DecreaseTimer();
-        //StartCoroutine(EndGame());
         if (!inGame && Input.GetButton("Start"))
         {
             SceneManager.LoadScene("Menu");
@@ -66,7 +61,6 @@ public class GameManager : MonoBehaviour
         {
             gameTimer = 0;
             Destroy(ball);
-            //ui.ShowWinner(); // this is showing multiple times. 
             yield return new WaitForSeconds(2f);
             SceneManager.LoadScene(endGameScene);
         }
@@ -83,7 +77,6 @@ public class GameManager : MonoBehaviour
         {
             winner = "Ganador jugador azul";
         }
-
         return winner;
     }
 
@@ -103,8 +96,6 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator GameCicle()
     {
-        // gameTimer = 90f;
-
         gameTimer = PlayerPrefs.GetFloat("GameDuration")/*90f*/;
         while (gameTimer > 0)
         {
@@ -116,7 +107,6 @@ public class GameManager : MonoBehaviour
         gameTimer = 0;
         StopCoroutine(GameCicle());
         inGame = false;
-      
     }
 
     public void PlayGolSound()

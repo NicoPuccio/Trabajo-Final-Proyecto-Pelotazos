@@ -32,7 +32,6 @@ public class PlayerHitBall : MonoBehaviour
         foreach (Collider bola in ball)
         {
             Debug.Log("I hit the " + bola.name);
-            
             bola.GetComponent<Ball>().ChangeMaterial(rend.material);
         }
     }

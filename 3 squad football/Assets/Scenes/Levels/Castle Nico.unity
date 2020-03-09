@@ -1777,6 +1777,18 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!82 &398539148 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7534581578456947544, guid: e618c1d7c2d81f4409891a27e8f50a0c,
+    type: 3}
+  m_PrefabInstance: {fileID: 603078280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &398539149 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4999819042144107391, guid: e618c1d7c2d81f4409891a27e8f50a0c,
+    type: 3}
+  m_PrefabInstance: {fileID: 603078280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &414576277 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 103260, guid: 3dfa49e4a64548b4d9aad356ce103be9,
@@ -2793,6 +2805,8 @@ MonoBehaviour:
   verticalInput: Vertical
   jumpInput: Jump
   dashInput: Dash
+  audioKick: {fileID: 0}
+  audioDash: {fileID: 0}
   isGrounded: 0
   jumpForce: 12
   dashSpeed: 50
@@ -2881,6 +2895,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1601616302, guid: e618c1d7c2d81f4409891a27e8f50a0c, type: 3}
+      propertyPath: audioKick
+      value: 
+      objectReference: {fileID: 398539148}
+    - target: {fileID: 1601616302, guid: e618c1d7c2d81f4409891a27e8f50a0c, type: 3}
+      propertyPath: audioDash
+      value: 
+      objectReference: {fileID: 398539149}
     - target: {fileID: 1601616303, guid: e618c1d7c2d81f4409891a27e8f50a0c, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2889,6 +2911,21 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4999819042144107391, guid: e618c1d7c2d81f4409891a27e8f50a0c,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999819042144107391, guid: e618c1d7c2d81f4409891a27e8f50a0c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999819042144107391, guid: e618c1d7c2d81f4409891a27e8f50a0c,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 94fa56d3c897a394e8ff010db50c1c7f, type: 3}
     - target: {fileID: 5016204292526748495, guid: e618c1d7c2d81f4409891a27e8f50a0c,
         type: 3}
       propertyPath: m_Name
@@ -5342,6 +5379,8 @@ MonoBehaviour:
   verticalInput: Vertical
   jumpInput: Jump
   dashInput: Dash
+  audioKick: {fileID: 0}
+  audioDash: {fileID: 0}
   isGrounded: 0
   jumpForce: 10
   dashSpeed: 10
@@ -6843,7 +6882,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d375d798d79c9534683dc6ba89f3f6bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: []
   ui: {fileID: 0}
 --- !u!4 &1239015452 stripped
 Transform:
@@ -10397,6 +10435,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &1887830540 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 294306674144465163, guid: 3478728bbcf4ab045af8ce4f71bff3c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2137684635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1887830541 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3019466425924530476, guid: 3478728bbcf4ab045af8ce4f71bff3c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2137684635}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1899966087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10915,7 +10965,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8e88e59315e737f4599e6e279dda524b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -11601,6 +11651,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3019466425924530476, guid: 3478728bbcf4ab045af8ce4f71bff3c2,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3019466425924530476, guid: 3478728bbcf4ab045af8ce4f71bff3c2,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 94fa56d3c897a394e8ff010db50c1c7f, type: 3}
+    - target: {fileID: 3019466425924530476, guid: 3478728bbcf4ab045af8ce4f71bff3c2,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7819832638876562429, guid: 3478728bbcf4ab045af8ce4f71bff3c2,
+        type: 3}
+      propertyPath: audioKick
+      value: 
+      objectReference: {fileID: 1887830540}
+    - target: {fileID: 7819832638876562429, guid: 3478728bbcf4ab045af8ce4f71bff3c2,
+        type: 3}
+      propertyPath: audioDash
+      value: 
+      objectReference: {fileID: 1887830541}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3478728bbcf4ab045af8ce4f71bff3c2, type: 3}
 --- !u!1 &1975456873690727 stripped

@@ -20,7 +20,8 @@ public class PlayerController : MonoBehaviour
     public string dashInput = "Dash";
 
     //audio
-    private AudioSource audioSource;
+    public AudioSource audioKick;
+    public AudioSource audioDash;
     
     //jump
     public bool isGrounded;
@@ -42,7 +43,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         dashTime = startDashTime;
         startPosition = gameObject.transform.position;
@@ -137,12 +137,12 @@ public class PlayerController : MonoBehaviour
             dashTime = startDashTime;
             rb.velocity = Vector3.zero;
         }
-        if (Input.GetButtonDown(dashInput) && dashCooldown <= 0)
+        if (Input.GetButtonDown(dashInput) && dashCooldown <= 0 && (horizontal != 0 || vertical != 0))
         {
-            
             dashCooldown = startDashCooldown;
             rb.AddForce(direction * dashSpeed, ForceMode.VelocityChange);
             dashing = true;
+            PlayDashSound();
         }
         if (dashing)
         {
@@ -158,9 +158,13 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+
+    private void PlayDashSound()
+    {
+        audioDash.Play();
+    }
     private void Jump()
     {
-        //jump
         if (Input.GetButtonDown(jumpInput) && isGrounded)
         {
             isJumping = true;
@@ -171,21 +175,14 @@ public class PlayerController : MonoBehaviour
             isJumping = false;
         }
     }
-    //private void AnimateMovement(bool moving)
-    //{
-    //    if (animator)
-    //    {
-    //        animator.SetBool("IsRunning", moving);
-    //    }
-    //}
+    
     void OnCollisionEnter(Collision collisionInfo)
     {
-
         if(collisionInfo.collider.tag == "Ground")
             isGrounded = true;
         if (collisionInfo.collider.tag == "Ball")
         {
-            audioSource.Play();
+            audioKick.Play();
         }
     }
     

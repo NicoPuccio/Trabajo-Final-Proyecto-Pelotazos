@@ -25,10 +25,7 @@ public class MenuScripts : MonoBehaviour
         {
             index = 0;
         }
-      
     }
-
-
 
     public void GoToTheNextButton()
     {
@@ -39,8 +36,8 @@ public class MenuScripts : MonoBehaviour
         Buttons[index].Select();
         index++;
     }
-
-   public void ExitGame()
+    
+    public void ExitGame()
     {
         Application.Quit();
     }
