@@ -6,10 +6,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //input
-    float horizontal;
-    float vertical;
+    private float horizontal;
+    private float vertical;
     Vector3 direction;
-    bool jump = false;
+    private bool jump = false;
     
     //movement
     public float movementSpeed = 1f;
@@ -47,8 +47,7 @@ public class PlayerController : MonoBehaviour
         dashTime = startDashTime;
         startPosition = gameObject.transform.position;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         //get inpuit in the update. not working well for dash and jump
@@ -63,10 +62,9 @@ public class PlayerController : MonoBehaviour
     {
         //all physics movement is better in fixed update.
         Movement();
-        
     }
 
-    void SaveFromFall()
+    void SaveFromFall() //in case some unexpected bug appears
     {
         if (transform.position.y < 0)
         {
@@ -185,6 +183,10 @@ public class PlayerController : MonoBehaviour
 
         if(collisionInfo.collider.tag == "Ground")
             isGrounded = true;
+        if (collisionInfo.collider.tag == "Ball")
+        {
+            audioSource.Play();
+        }
     }
     
     void OnCollisionExit(Collision collisionInfo)

@@ -9,21 +9,21 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Menu/Menu.unity
     guid: d0c09c683d8e4e341a23a6a3ad382d03
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
+    path: Assets/Scenes/Menu/Credits.unity
     guid: fda7873a6a05bc641964a4c54d1fe94a
   - enabled: 1
-    path: Assets/Scenes/FinkyPark Nico.unity
+    path: Assets/Scenes/Levels/FinkyPark Nico.unity
     guid: 7763d7fb5e2f7694a897b657789a8752
   - enabled: 1
-    path: Assets/Scenes/Office.unity
+    path: Assets/Scenes/Levels/Office.unity
     guid: 0f8d6f42b78fa164e8817044cd9a8dcd
   - enabled: 1
-    path: Assets/Scenes/Castle Nico.unity
+    path: Assets/Scenes/Levels/Castle Nico.unity
     guid: 3b7a55705c64f3147bcd489e465da838
   m_configObjects: {}
