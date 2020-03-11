@@ -18,7 +18,6 @@ public class MenuManager : MonoBehaviour
         durationSelector.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (selectmap&& Input.GetKey(KeyCode.Escape) || Input.GetButton("Back"))
@@ -26,8 +25,6 @@ public class MenuManager : MonoBehaviour
             Menu.SetActive(true);
             selectmap = false;
         }
-
-        
     }
 
     public void SelectDuration()

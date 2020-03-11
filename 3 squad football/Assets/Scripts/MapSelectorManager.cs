@@ -34,11 +34,11 @@ public class MapSelectorManager : MonoBehaviour
         {
             GiveMeIndex();
         }
-        if (Input.GetButton("Start") && !ready)
+        if (Input.GetButton("Fire1") && !ready)
         {
             Play.Select();
         }
-        else if (Input.GetButton("Start") && ready)
+        else if (Input.GetButton("Fire1") && ready)
         {
             Play.Select();
         }

@@ -16,10 +16,12 @@ public class DurationSelect : MonoBehaviour
     public string currentTime;
     public Text timeActual;
 
+
     void Start()
     {
         Time = timeduration[index];
         SetTime();
+      
     }
 
     public void SetTime(/*float time*/)
@@ -34,11 +36,11 @@ public class DurationSelect : MonoBehaviour
         {
             GiveMeIndex();
         }
-        if (Input.GetButton("Start") && !ready)
+        if (Input.GetButton("Fire1") && !ready)
         {
             Play.Select();
         }
-        else if (Input.GetButton("Start") && ready)
+        else if (Input.GetButton("Fire1") && ready)
         {
             Play.Select();
         }
