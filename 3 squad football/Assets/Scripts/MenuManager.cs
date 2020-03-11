@@ -40,4 +40,5 @@ public class MenuManager : MonoBehaviour
         MapSelector.SetActive(true);
         selectmap = true;
     }
+
 }

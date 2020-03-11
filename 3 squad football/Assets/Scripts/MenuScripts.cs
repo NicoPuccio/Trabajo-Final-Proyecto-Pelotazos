@@ -25,6 +25,16 @@ public class MenuScripts : MonoBehaviour
         {
             index = 0;
         }
+        if (Input.GetButton("okMenu"))
+        {
+            Click();
+        }
+    }
+
+    public void Click()
+    {
+        Buttons[index].Select();
+        Buttons[index].Select();
     }
 
     public void GoToTheNextButton()

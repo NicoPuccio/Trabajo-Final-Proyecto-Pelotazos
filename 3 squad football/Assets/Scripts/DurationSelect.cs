@@ -36,11 +36,11 @@ public class DurationSelect : MonoBehaviour
         {
             GiveMeIndex();
         }
-        if (Input.GetButton("Fire1") && !ready)
+        if (Input.GetButton("okMenu") && !ready || Input.GetButton("Start") && !ready)
         {
             Play.Select();
         }
-        else if (Input.GetButton("Fire1") && ready)
+        else if (Input.GetButton("okMenu") && ready || Input.GetButton("Start") && ready)
         {
             Play.Select();
         }
