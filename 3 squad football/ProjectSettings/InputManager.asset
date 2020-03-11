@@ -7,7 +7,7 @@ InputManager:
   m_Axes:
   - serializedVersion: 3
     m_Name: Horizontal
-    descriptiveName: 
+    descriptiveName: Keyboard
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -23,7 +23,7 @@ InputManager:
     joyNum: 1
   - serializedVersion: 3
     m_Name: Horizontal2
-    descriptiveName: 
+    descriptiveName: Keyboard
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -39,7 +39,7 @@ InputManager:
     joyNum: 2
   - serializedVersion: 3
     m_Name: Vertical
-    descriptiveName: 
+    descriptiveName: Keyboard
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -55,7 +55,7 @@ InputManager:
     joyNum: 1
   - serializedVersion: 3
     m_Name: Vertical2
-    descriptiveName: 
+    descriptiveName: Keyboard
     descriptiveNegativeName: 
     negativeButton: k
     positiveButton: i
@@ -183,7 +183,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Horizontal
-    descriptiveName: 
+    descriptiveName: Joystick
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -199,7 +199,7 @@ InputManager:
     joyNum: 1
   - serializedVersion: 3
     m_Name: Horizontal2
-    descriptiveName: 
+    descriptiveName: Joystick
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -215,7 +215,7 @@ InputManager:
     joyNum: 2
   - serializedVersion: 3
     m_Name: Vertical
-    descriptiveName: 
+    descriptiveName: Joystick
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -231,7 +231,7 @@ InputManager:
     joyNum: 1
   - serializedVersion: 3
     m_Name: Vertical2
-    descriptiveName: 
+    descriptiveName: Joystick
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
