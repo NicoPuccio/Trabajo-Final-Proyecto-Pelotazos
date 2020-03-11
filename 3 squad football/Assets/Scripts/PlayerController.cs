@@ -14,10 +14,10 @@ public class PlayerController : MonoBehaviour
     //movement
     public float movementSpeed = 1f;
     private Rigidbody rb;
-    public string horizontalInput = "Horizontal";
-    public string verticalInput = "Vertical";
-    public string jumpInput = "Jump";
-    public string dashInput = "Dash";
+    public string horizontalInput;
+    public string verticalInput;
+    public string jumpInput;
+    public string dashInput;
 
     //audio
     public AudioSource audioKick;
@@ -99,31 +99,15 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isJumping", false);
         }
-        if (dashing)
-        {
-            animator.SetBool("isDashing", true);
-        }
-        else
-        {
-            animator.SetBool("isDashing", false);
-        }
     }
 
     void Movement()
     {
-        // get input
-        //dash
-        
-        //movement
         if (horizontal != 0 || vertical != 0)
         {
             rb.rotation = Quaternion.LookRotation(direction);
             rb.MovePosition(rb.position + direction * movementSpeed * Time.deltaTime);
         }
-        //else
-        //{
-        //    AnimateMovement(false);
-        //}
     }
     
     private void Dash()
