@@ -9,6 +9,7 @@ public class Ball : MonoBehaviour
     private BoxCollider bc;
     public float impulseForce;
     private Vector3 startPosition;
+    private AudioSource audioSource;
     
     void Start()
     {
@@ -16,6 +17,7 @@ public class Ball : MonoBehaviour
         rend = GetComponent<Renderer>();
         bc = GetComponent<BoxCollider>();
         rend.enabled = true;
+        audioSource = GetComponent<AudioSource>();
     }
     
     
@@ -56,10 +58,5 @@ public class Ball : MonoBehaviour
     public Material GetMaterial()
     {
         return rend.sharedMaterial;
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        
     }
 }
